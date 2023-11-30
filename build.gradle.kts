@@ -25,3 +25,8 @@ tasks.named("dependencyUpdates", DependencyUpdatesTask::class.java).configure {
  // don't look at gradle rc versions either
  gradleReleaseChannel = "current"
 }
+
+// https://youtrack.jetbrains.com/issue/KT-48410/Sync-failed.-Could-not-determine-the-dependencies-of-task-commonizeNativeDistribution.#focus=Comments-27-5144160.0-0
+repositories {
+ mavenCentral()
+}
