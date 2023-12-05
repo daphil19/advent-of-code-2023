@@ -3,4 +3,8 @@ plugins {
 }
 
 rootProject.name = "advent-of-code-2023"
-include("day01")
+include("shared")
+include("01")
+include("02")
+include("03")
+include("04")
