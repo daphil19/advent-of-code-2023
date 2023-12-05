@@ -1,5 +1,3 @@
-package day02
-
 import INPUT_FILE
 import getLines
 

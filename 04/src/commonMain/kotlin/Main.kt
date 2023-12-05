@@ -1,5 +1,3 @@
-package day04
-
 import INPUT_FILE
 import getLines
 import kotlin.math.pow
