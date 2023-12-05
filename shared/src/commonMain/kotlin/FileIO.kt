@@ -1,13 +1,12 @@
 
 import okio.FileSystem
 import okio.Path
-import okio.Path.Companion.toPath
 
 
 internal expect val FILE_SYSTEM: FileSystem
-expect val INPUT_FILE: Path
+expect val INPUT_FILE: String
 
-fun getLines(path: String) = getLines(path.toPath())
-fun getLines(path: Path) = FILE_SYSTEM.read(path) {
+expect fun getLinesFromFile(path: String): List<String>
+internal fun getLinesFromFile(path: Path) = FILE_SYSTEM.read(path) {
     readUtf8()
-}.split("\n")
+}.lines()

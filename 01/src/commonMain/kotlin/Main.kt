@@ -1,7 +1,4 @@
-package day01
-
-import INPUT_FILE
-import getLines
+expect fun getLines(inputOrPath: String): List<String>
 
 fun main() {
     val lines = getLines(INPUT_FILE)

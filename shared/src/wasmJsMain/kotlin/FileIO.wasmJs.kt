@@ -1,7 +1,6 @@
-
 import okio.FileSystem
-import okio.Path.Companion.toPath
-import okio.WasiFileSystem
 
-internal actual val FILE_SYSTEM: FileSystem = WasiFileSystem
-actual val INPUT_FILE = FILE_SYSTEM.canonicalize("kotlin/input.txt".toPath())
+internal actual val FILE_SYSTEM: FileSystem = TODO("Wasm doesn't work with file systems at the moment")
+actual val INPUT_FILE: String = TODO("Wasm doesn't work with file systems at the moment")
+
+actual fun getLinesFromFile(path: String): List<String> = TODO("Wasm doesn't work with file systems at the moment")

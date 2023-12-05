@@ -1,4 +1,5 @@
 
+expect fun getLines(inputOrPath: String): List<String>
 
 fun main() {
     var lines = getLines(INPUT_FILE)

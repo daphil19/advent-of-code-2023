@@ -1,9 +1,7 @@
 
 import okio.FileSystem
-import okio.Path
-import okio.WasiFileSystem
 
-internal actual val FILE_SYSTEM: FileSystem
-    get() = WasiFileSystem
-actual val INPUT_FILE: Path
-    get() = TODO("Not yet implemented")
+internal actual val FILE_SYSTEM: FileSystem = TODO()
+actual val INPUT_FILE: String = TODO("Wasm doesn't work with file systems at the moment")
+
+actual fun getLinesFromFile(path: String): List<String> = TODO("Wasm doesn't work with file systems at the moment")

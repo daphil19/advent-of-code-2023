@@ -1,5 +1,4 @@
-import INPUT_FILE
-import getLines
+expect fun getLines(inputOrPath: String): List<String>
 
 fun main() {
     val lines = getLines(INPUT_FILE)
@@ -8,8 +7,8 @@ fun main() {
 //            "Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red\n" +
 //            "Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red\n" +
 //            "Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green").split("\n")
-//    part1(lines)
-//    part2(lines)
+    part1(lines)
+    part2(lines)
 }
 
 const val MAX_RED = 12L
