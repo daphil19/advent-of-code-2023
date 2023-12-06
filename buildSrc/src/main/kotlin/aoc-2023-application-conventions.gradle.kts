@@ -36,7 +36,9 @@ tasks.register("runAll") {
     dependsOn("jvmRun")
     dependsOn("jsNodeRun")
     dependsOn("runReleaseExecutableNativeHost")
+    // getting runtime errors with wasmjsnode
 //    dependsOn("wasmJsNodeRun")
+    dependsOn("wasmWasiNodeRun")
 }
 
 //application {
