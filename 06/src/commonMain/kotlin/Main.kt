@@ -5,11 +5,11 @@ fun main() {
 //    lines = """Time:      7  15   30
 //Distance:  9  40  200""".lines()
 
-    day1(lines)
-    day2(lines)
+    part1(lines)
+    part2(lines)
 }
 
-fun day1(lines: List<String>) {
+fun part1(lines: List<String>) = printDuration {
     val times = lines[0].removePrefix("Time: ").trim().split(" ").filter { it.isNotBlank() }.map { it.toLong() }
     val distances = lines[1].removePrefix("Distance: ").trim().split(" ").filter { it.isNotBlank() }.map { it.toLong() }
 
@@ -22,10 +22,10 @@ fun day1(lines: List<String>) {
         }.toLong()
     }.reduce { acc, i -> acc * i }
 
-    println(res)
+    print("part 1: $res ")
 }
 
-fun day2(lines: List<String>) {
+fun part2(lines: List<String>) = printDuration {
     val time = lines[0].replace("\\D".toRegex(), "").toLong()
     val bestDist = lines[1].replace("\\D".toRegex(), "").toLong()
 
@@ -36,5 +36,5 @@ fun day2(lines: List<String>) {
         dist > bestDist
     }.fold(0L) { acc, _ -> acc + 1}
 
-    println(res)
+    print("part 2: $res ")
 }
